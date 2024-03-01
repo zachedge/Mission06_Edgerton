@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Mission06_Edgerton.Models;
 
@@ -10,9 +11,11 @@ using Mission06_Edgerton.Models;
 namespace Mission06_Edgerton.Migrations
 {
     [DbContext(typeof(MovieEntryContext))]
-    partial class MovieEntryContextModelSnapshot : ModelSnapshot
+    [Migration("20240301210541_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.2");
